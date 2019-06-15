@@ -27,7 +27,7 @@ export default (state = INITIAL_STATE, action) => {
     }
 
     case TOGGLE_COMPLETED:
-    const todos= [...state.todos]; 
+    const todos= [...state.todos]; //Spread operator
     todos[action.payload].completed = !todos[action.payload].completed;
     return {
       ...state,
