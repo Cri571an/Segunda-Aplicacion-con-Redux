@@ -13,10 +13,11 @@ export default (state = INITIAL_STATE, action) => {
         value: action.payload
       }
     case SAVE_TODO:
-    return {
-      ...state,
+    return state.value ? {
+      ...state, //State actualizado
+      value: '',
       todos: [...state.todos, {value: state.value, completed:false}], //Arreglo de la lista
-    }
+    } : state
     default:
     return state;
   }
