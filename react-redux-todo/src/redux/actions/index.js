@@ -21,9 +21,9 @@ export const deleteTodo = index => {
   };
 };
 
-export const toggleCompleted = completed => {
+export const toggleCompleted = index => {
   return {
     type: TOGGLE_COMPLETED,
-    payload: completed
+    payload: index
   };
 };
